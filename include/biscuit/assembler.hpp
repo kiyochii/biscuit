@@ -1541,6 +1541,10 @@ public:
 
     void VFWMACCBF16(Vec vd, FPR rs1, Vec vs2, VecMask mask = VecMask::No) noexcept;
     void VFWMACCBF16(Vec vd, Vec vs1, Vec vs2, VecMask mask = VecMask::No) noexcept;
+    
+    // Zkr Extension Instructions
+
+    void RDSEED(GPR rd) noexcept;
 
 private:
     // Binds a label to a given offset.

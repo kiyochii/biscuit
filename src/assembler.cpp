@@ -1421,6 +1421,10 @@ void Assembler::BindToOffset(Label* label, Label::LocationOffset offset) {
     label->ClearOffsets();
 }
 
+void Assembler::RDSEED(GPR rd){
+    CSRR(rd, CSR::Seed);
+}
+
 ptrdiff_t Assembler::LinkAndGetOffset(Label* label) {
     BISCUIT_ASSERT(label != nullptr);
 
